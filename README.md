@@ -12,12 +12,10 @@ If, after installation, you see messages like “user is not in the sudoers file
 Follow these steps:
 
 A. Boot into Recovery Mode
-Reboot the device.
-In the GRUB menu, select Advanced options for Debian.
-Choose the entry ending with (recovery mode).
-Select the option that opens a root shell.      
+Boot Chuwi Hi8 and in the GRUB menu, select Advanced options for Debian.
+Choose the entry ending with (recovery mode) and a root shell starts automatically, insert your root password.      
 B. Add your user to the sudo group
-Replace yourusername with your actual username:
+Replace 'yourusername' with your actual username, the same that you put in the installation:
       
       usermod -aG sudo yourusername
             
@@ -41,7 +39,7 @@ Create the firmware path:
 
       sudo mkdir -p /lib/firmware/silead
   
-Copy the firmware:
+Download the firmware and copy in /lib/firmware/silead:
 
       sudo cp ~/Downloads/gsl1680-chuwi-hi8.fw /lib/firmware/silead/
   
@@ -77,7 +75,6 @@ Choose Plasma Mobile (Wayland) and log in.
 
 8. Enable Autologin (autologin script)
 Attachted is the full script that enables SDDM autologin specifically for Plasma Mobile (Wayland).
-Save it as: enable_autologin_plasma_mobile_wayland.sh
 
 Make it executable and run it:
 
