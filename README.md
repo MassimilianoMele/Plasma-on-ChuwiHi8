@@ -2,11 +2,11 @@
 
 This guide explains how to install Debian 12 with KDE Plasma, enable the Silead GSL1680 touchscreen firmware for the Chuwi Hi8 tablet, install Plasma Mobile from the standard Debian repository, switch to the Plasma Mobile Wayland session, and enable autologin using a custom script.
 
-1. Install Debian 12 with KDE Plasma
+**Install Debian 12 with KDE Plasma**
 Download Debian 12 ISO, install the system normally (Rufus for flashing, ESC on Booting and choose USB as start), and when prompted for the desktop environment select KDE Plasma.
 Debian will automatically install SDDM as the default display manager.
 
-✔ Add sudo privileges to your user (important)
+**Add sudo privileges to your user (important)**
 On some Debian 12 installations, the user created during setup is not automatically added to the sudo group.
 If, after installation, you see messages like “user is not in the sudoers file”, you must manually enable sudo privileges.
 Follow these steps:
@@ -31,7 +31,7 @@ C. Reboot normally
 Your user now has full sudo access, and you can proceed with installing Plasma Mobile, 
 copying firmware, and running configuration scripts.
 
-3. Install the Touchscreen Firmware (GSL1680 – Chuwi Hi8)
+**Install the Touchscreen Firmware (GSL1680 – Chuwi Hi8)**
 The Chuwi Hi8 uses a Silead GSL1680 touchscreen.
 Download the firmware file gsl1680-chuwi-hi8.fw and place it in the correct directory.
 
@@ -57,7 +57,7 @@ Reboot:
   
 After reboot, the touchscreen should work.
 
-5. Install Plasma Mobile
+**Install Plasma Mobile**
 Plasma Mobile is included in the default Debian 12 repository.
 Install the base environment:
 
@@ -68,12 +68,12 @@ Or install the full environment:
 
       sudo apt install plasma-mobile-full
 
-6. Switch to the Plasma Mobile Wayland Session
+**Switch to the Plasma Mobile Wayland Session**
 Log out from your current KDE Plasma session.
 At the login screen (SDDM), open the session selector (gear icon).
 Choose Plasma Mobile (Wayland) and log in.
 
-8. Enable Autologin (autologin script)
+**Enable Autologin (autologin script)**
 Attachted is the full script that enables SDDM autologin specifically for Plasma Mobile (Wayland).
 
 Make it executable and run it:
