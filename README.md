@@ -10,11 +10,10 @@ Debian will automatically install SDDM as the default display manager.
 On some Debian 12 installations, the user created during setup is not automatically added to the sudo group.
 If, after installation, you see messages like “user is not in the sudoers file”, you must manually enable sudo privileges.
 Follow these steps:
+
 A. Boot into Recovery Mode
 Reboot the device.
-
 In the GRUB menu, select Advanced options for Debian.
-
 Choose the entry ending with (recovery mode).
 Select the option that opens a root shell.      
 B. Add your user to the sudo group
