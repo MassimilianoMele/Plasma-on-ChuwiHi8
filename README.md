@@ -1,6 +1,6 @@
 **Install Plasma Mobile on the Chuwi Hi8 (Debian 12)**
 
-This guide explains how to install Debian 12 with Plasma Mobile, enable the Silead GSL1680 touchscreen firmware for the Chuwi Hi8 tablet, install Plasma Mobile from the standard Debian repository, switch to the Plasma Mobile Wayland session, and enable autologin using a custom script.
+This guide explains how to install Debian 12 with KDE Plasma, enable the Silead GSL1680 touchscreen firmware for the Chuwi Hi8 tablet, install Plasma Mobile from the standard Debian repository, switch to the Plasma Mobile Wayland session, and enable autologin using a custom script.
 
 1. Install Debian 12 with KDE Plasma
 Download Debian 12 ISO, install the system normally (Rufus for flashing, ESC on Booting and choose USB as start), and when prompted for the desktop environment select KDE Plasma.
