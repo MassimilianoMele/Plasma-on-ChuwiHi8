@@ -1,4 +1,5 @@
-Install Plasma Mobile on the Chuwi Hi8 (Debian 12)
+**Install Plasma Mobile on the Chuwi Hi8 (Debian 12)**
+
 This guide explains how to install Debian 12 with KDE Plasma, enable the GSL1680 touchscreen firmware for the Chuwi Hi8 tablet, install Plasma Mobile from the standard Debian repository, switch to the Plasma Mobile Wayland session, and enable autologin using a custom script.
 
 1. Install Debian 12 with KDE Plasma
@@ -29,7 +30,7 @@ Follow these steps:
 The Chuwi Hi8 uses a Silead GSL1680 touchscreen.
 Download the firmware file gsl1680-chuwi-hi8.fw and place it in the correct directory.
 Create the firmware path:
-  sudo mkdir -p /lib/firmware/sileadShow
+  sudo mkdir -p /lib/firmware/silead
 Copy the firmware:
   sudo cp ~/Downloads/gsl1680-chuwi-hi8.fw /lib/firmware/silead/
 Set permissions:
@@ -40,7 +41,7 @@ Reboot:
   sudo reboot
 After reboot, the touchscreen should work.
 
-3. Install Plasma Mobile
+4. Install Plasma Mobile
 Plasma Mobile is included in the default Debian 12 repository.
 Install the base environment:
   sudo apt update
@@ -48,12 +49,12 @@ Install the base environment:
 Or install the full environment:
   sudo apt install plasma-mobile-full
 
-4. Switch to the Plasma Mobile Wayland Session
+5. Switch to the Plasma Mobile Wayland Session
 Log out from your current KDE Plasma session.
 At the login screen (SDDM), open the session selector (gear icon).
 Choose Plasma Mobile (Wayland) and log in.
 
-5. Enable Autologin (autologin script)
+6. Enable Autologin (autologin script)
 Here is the full script that enables SDDM autologin specifically for Plasma Mobile (Wayland).
 Save it as: enable_autologin_plasma_mobile_wayland.sh
 
