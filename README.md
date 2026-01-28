@@ -91,4 +91,44 @@ Then reboot:
 
       sudo reboot
 
+**Bluetooth Firmware Setup (BCM4343A0)**
+
+This section explains how to enable Bluetooth on devices using the Broadcom BCM4343A0 chipset (such as the Chuwi Hi8).
+The procedure installs the required firmware and NVRAM files, then verifies that the Bluetooth controller initializes correctly.
+
+Install the Broadcom Firmware
+Copy the Bluetooth firmware file into the Broadcom firmware directory:
+
+      sudo cp BCM4343A0.hcd /lib/firmware/brcm/
+
+Copy the NVRAM configuration file:
+
+      sudo cp brcmfmac43430a0-sdio.ilife-S806.txt /lib/firmware/brcm/
+      sudo reboot
+      
+Verify Bluetooth Initialization
+
+After reboot, check whether the Bluetooth controller starts correctly:
+
+      dmesg | grep -i bluetooth
+If everything is working, you should see a line similar to:
+
+      Bluetooth: hci0: BCM4343A0 successfully initialized
+Test the Adapter
+Check rfkill status:
+
+      rfkill list
+Start the Bluetooth shell:
+
+      bluetoothctl
+      
+If bluetoothctl shows an adapter named hci0, the setup is complete.
+
+If Bluetooth Does Not Start
+Some systems require loading the UART driver manually:
+
+      sudo modprobe hci_uart
+Then restart the Bluetooth service:
+
+      sudo systemctl restart bluetooth
 Done!
