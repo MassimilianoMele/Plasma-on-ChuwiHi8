@@ -92,4 +92,3 @@ Then reboot:
       sudo reboot
 
 Done!
-You now have:
